@@ -1,0 +1,2 @@
+spring.application.name=WebApplication2
+server.port=8002

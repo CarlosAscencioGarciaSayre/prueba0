@@ -1,0 +1,8 @@
+spring.application.name=appgateaway
+server.port=8080
+spring.cloud.gateway.discovery.locator.enabled=true
+eureka.instance.instance-id=${spring.application.name}:${random.uuid}
+spring.cloud.loadbalancer.ribbon.enabled=false
+spring.cloud.gateway.routes[0].id=WebApplication2
+spring.cloud.gateway.routes[0].uri=lb://WebApplication2
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/**
